@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievers Horizon Campus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #002147;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            font-size: 36px;
+        }
+        nav {
+            text-align: center;
+            margin-top: 15px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 30px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            opacity: 0;
+            transition: opacity 1s, transform 1s;
+        }
+        section.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .course {
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #ececec;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: none;
+            opacity: 0;
+            transition: opacity 1s, transform 1s;
+        }
+        .course.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            background-color: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #f4a261;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #e76f51;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Achievers Horizon Campus</h1>
+        <nav>
+            <a href="javascript:void(0);" onclick="showSection('about')">About</a>
+            <a href="javascript:void(0);" onclick="showSection('courses')">Courses</a>
+            <a href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Achievers Horizon Campus is dedicated to providing high-quality education and career-focused courses to help students succeed.</p>
+    </section>
+
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <button onclick="showCourse('course1')">2 Days Photography Workshop</button>
+        <button onclick="showCourse('course2')">Language Classes</button>
+        <button onclick="showCourse('course3')">Computer Classes</button>
+        <button onclick="showCourse('course4')">Fiverr Class</button>
+        <button onclick="showCourse('course5')">Online Earning Class</button>
+
+        <div id="course1" class="course">
+            <h3>2 Days Photography Workshop</h3>
+            <p>Join us for an intensive 2-day workshop where you’ll learn the basics of photography, camera settings, composition, and editing techniques to elevate your skills!</p>
+        </div>
+        <div id="course2" class="course">
+            <h3>Language Classes</h3>
+            <p>We offer a range of language classes including English, Spanish, French, and more, designed to improve your communication skills and cultural knowledge.</p>
+        </div>
+        <div id="course3" class="course">
+            <h3>Computer Classes</h3>
+            <p>From beginners to advanced users, our computer classes cover everything from basic computer skills to more advanced topics like programming and web development.</p>
+        </div>
+        <div id="course4" class="course">
+            <h3>Fiverr Class</h3>
+            <p>Learn how to build a successful career on Fiverr, offering services in various fields such as graphic design, writing, programming, and more. Get tips and tricks to stand out and earn online!</p>
+        </div>
+        <div id="course5" class="course">
+            <h3>Online Earning Class</h3>
+            <p>This class will teach you how to make money online using various platforms and methods, including freelancing, affiliate marketing, and online sales strategies.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <a href="https://wa.me/message/5ZEUFPYZBZAKC1" class="btn" target="_blank">Direct Chat on WhatsApp</a>
+        <p>Mobile: +94 768709926 | +94 762968470</p>
+        <p>Email: <a href="mailto:achievershorizon@gmail.com">achievershorizon@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Achievers Horizon Campus. All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Function to show sections with smooth transitions and hide others
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.add('show');
+                } else {
+                    section.classList.remove('show');
+                }
+            });
+        }
+
+        // Function to show course details with a sliding effect
+        function showCourse(courseId) {
+            const courses = document.querySelectorAll('.course');
+            courses.forEach(course => {
+                if (course.id === courseId) {
+                    course.classList.add('show');
+                } else {
+                    course.classList.remove('show');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
